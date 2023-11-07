@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>online voting system</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <style>
+        #address{
+            width: 30%;
+        }
+        #img{
+            border: 1px solid rgb(45, 45, 45);
+            border-radius: 8px;
+            padding: 15px;
+            width: 30%;
+            margin: auto;
+            color: rgb(45, 45, 45);
+        }
+        #roles{
+            border: 1px solid rgb(45, 45, 45);
+            border-radius: 8px;
+            padding: 15px;
+            width: 30%;
+            margin: auto;
+            color: rgb(45, 45, 45); 
+        }
+        #roles select{
+            padding: 8px;
+            border-radius: 8px;
+        }
+        #regbtn{
+            padding: 10px;
+    border-radius: 8px;
+    background-color: coral;
+    border: none;
+    width: 8%;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+        }
+    </style>
+    <div id="headerSection">
+    <h1>Online Voting System</h1>
+    <hr>
+</div>
+<div id="bodySection">
+    <h3>Registration</h3>
+
+    <form action="../api/register.php" method="POST" enctype="multipart/form-data">
+    
+    <input type="text" name="name" placeholder="Name">
+    <input type="number" name="mobile" placeholder="Mobile">
+    <br><br>
+    <input type="password" name="password" placeholder="password">
+    <input type="password" name="cpassword" placeholder="confirm password">
+    <br><br>
+    <input type="text" name="address" placeholder="Address" id="address">
+<br><br>
+<div id="img">
+    Upload image : <input type="file" name="photo">
+</div>
+    <br>
+    <div id="roles">
+    Select role : <select name="role">
+        <option value="1">Voter</option>
+        <option value="2">Group</option>
+
+    </select>
+</div>
+    <br>
+    <button id="regbtn">Register</button>
+    <br><br>
+    Already User? <a href="../index.html">Login here</a>
+
+</form>
+</div>
+</body>
+</html>
